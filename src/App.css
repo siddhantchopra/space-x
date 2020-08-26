@@ -1,0 +1,46 @@
+.filter .btn{
+    background: #c5e09b;
+    width: fit-content;
+    margin: auto;
+}
+.filter .btn.active{
+    background: #7cba01;
+}
+.filter p {
+    border-bottom: 1px solid #ddd;
+    width: fit-content;
+    margin: auto;
+    font-weight: 600;
+}
+.filter {
+    background-color: #fff;
+}
+body {
+    background-color: #eee;
+}
+.year-container{
+    display: grid;
+    grid-template-columns: repeat(2, 80px);
+}
+
+.card-img-top{
+    background-color: #eee;
+    text-align: center;
+    padding: 20px;
+}
+.card-img-top img {
+    width: 100%;
+}
+.card-title{
+    color: #536296;
+}
+.card-text{
+    font-weight: 600;
+}
+.card-text span, .card-body li{
+    color: #536296;
+}
+.year{
+    display: flex;
+    justify-content: center;
+}
