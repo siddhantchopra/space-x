@@ -4,10 +4,11 @@ import { Cards } from './cards'
 import axios from 'axios'
 import {baseURL} from './constant'
 
+let cancelToken;
+
 export const Dashboard = (props) => {
     let [data, setData] = useState()
     let [isLoading, setLoading] = useState(true)
-    let cancelToken;
 
     useLayoutEffect(()=>{
         axios.get(baseURL).then((res)=>{
