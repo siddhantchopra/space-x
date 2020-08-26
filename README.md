@@ -1,7 +1,7 @@
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 A good example of an responsive app which uses Bootstrap4 & React Hooks
 
-Live Demo: https://serene-neumann-272ca6.netlify.app/
+Live Demo: https://spacex-app-test.herokuapp.com
 
 ## Available Scripts
 
