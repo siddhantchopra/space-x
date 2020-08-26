@@ -23,8 +23,8 @@ export const Dashboard = (props) => {
     const getData=(obj)=>{
         setLoading(true)
         if(Object.keys(obj).length > 0){
-            let query = `?land_success=${obj.land ?obj.land : ''}&launch_year=${obj.year ?obj.year:''}&launch_success=${obj.launch ?obj.launch: ''}&limit=100`
-            // let query = `${obj.launch ?'&launch_success='+obj.launch: ''}${obj.land ?'&land_success='+obj.land : ''}${obj.year ?'&lauch_year='+obj.year:''}`
+             let query = `?land_success=${obj.land ?obj.land : ''}&launch_year=${obj.year ?obj.year:''}&launch_success=${obj.launch ?obj.launch: ''}&limit=100`
+            //  let query = `${obj.launch ?'&launch_success='+obj.launch: ''}${obj.land ?'&land_success='+obj.land : ''}${obj.year ?'&launch_year='+obj.year:''}`
             let url =`${baseURL+query}`
                
                 if (typeof cancelToken != typeof undefined) {
@@ -53,10 +53,10 @@ export const Dashboard = (props) => {
     return (
         <div className="container-fluid">
             <h2 className="pl-2 head">SpaceX Launch Programs</h2>
-                {isLoading && <h3 className="text-center">Loading...    </h3>}
             <div className="row">
                 <div className="col-lg-3 col-xl-2 col-md-4 col-sm-12"><Filter filterObject={getData}/> </div>
-                <div className="col-lg-9 col-xl-10 col-md-8 col-sm-12"><Cards data={data}/></div>
+            {isLoading && <h3 className="text-center">Loading...    </h3>}
+               {!isLoading && <div className="col-lg-9 col-xl-10 col-md-8 col-sm-12"><Cards data={data}/></div>}
             </div>
             <h3 className="text-center">Developed By: Siddhant Chopra</h3>
         </div>
