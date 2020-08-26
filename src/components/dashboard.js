@@ -52,7 +52,7 @@ export const Dashboard = (props) => {
  
     return (
         <div className="container-fluid">
-            <h2 className="pl-2">SpaceX Launch Programs</h2>
+            <h2 className="pl-2 head">SpaceX Launch Programs</h2>
                 {isLoading && <h3 className="text-center">Loading...    </h3>}
             <div className="row">
                 <div className="col-lg-3 col-xl-2 col-md-4 col-sm-12"><Filter filterObject={getData}/> </div>
