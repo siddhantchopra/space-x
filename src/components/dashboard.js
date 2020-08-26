@@ -10,8 +10,8 @@ export const Dashboard = (props) => {
     let [data, setData] = useState()
     let [isLoading, setLoading] = useState(true)
 
-    useLayoutEffect(()=>{
-        axios.get(baseURL).then((res)=>{
+    useLayoutEffect(()=>{ 
+        axios.get(baseURL+'?land_success=&launch_year=&launch_success=&limit=100').then((res)=>{
             let arr = []
             arr.push(res.data)
             setData(...arr)
@@ -19,16 +19,12 @@ export const Dashboard = (props) => {
             props.history.push('/search')
         })
     },[])
-
-    // useLayoutEffect(() => {
-    //     props.history.push('/search')
-    // }, [])
     
     const getData=(obj)=>{
         setLoading(true)
         if(Object.keys(obj).length > 0){
-            // let query = `&launch_success=${obj.launch ?obj.launch: ''}&land_success=${obj.land ?obj.land : ''}&lauch_year=${obj.year ?obj.year:''}`
-            let query = `${obj.launch ?'&launch_success='+obj.launch: ''}${obj.land ?'&land_success='+obj.land : ''}${obj.year ?'&lauch_year='+obj.year:''}`
+            let query = `?land_success=${obj.land ?obj.land : ''}&launch_year=${obj.year ?obj.year:''}&launch_success=${obj.launch ?obj.launch: ''}&limit=100`
+            // let query = `${obj.launch ?'&launch_success='+obj.launch: ''}${obj.land ?'&land_success='+obj.land : ''}${obj.year ?'&lauch_year='+obj.year:''}`
             let url =`${baseURL+query}`
                
                 if (typeof cancelToken != typeof undefined) {

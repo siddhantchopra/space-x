@@ -25,7 +25,7 @@ export const Filter = (props) => {
     },[getObj])
     return (
         <div className="filter mb-3">
-            <h3 className="pl-2">Filters </h3>
+            <h3 className="pl-3 pt-2">Filters </h3>
             <p className="mb-2">Launch Year</p>
             <div className="year text-center">
             <div className="year-container">

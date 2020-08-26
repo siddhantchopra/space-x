@@ -3,6 +3,10 @@
     width: fit-content;
     margin: auto;
 }
+.filter {
+    top: 40px;
+    position: sticky;
+}
 .filter .btn.active{
     background: #7cba01;
 }
@@ -14,6 +18,7 @@
 }
 .filter {
     background-color: #fff;
+    border-radius: 15px;
 }
 body {
     background-color: #eee;
@@ -43,4 +48,11 @@ body {
 .year{
     display: flex;
     justify-content: center;
+}
+.card {
+    border-radius: 15px;
+}
+.head {
+    top: 0px;
+    position: sticky;
 }

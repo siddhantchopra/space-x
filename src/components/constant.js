@@ -1,1 +1,1 @@
-export const baseURL = "https://api.spaceXdata.com/v3/launches?limit=50"
+export const baseURL = "https://api.spaceXdata.com/v3/launches"
