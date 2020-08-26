@@ -15,6 +15,7 @@ export const Dashboard = (props) => {
             arr.push(res.data)
             setData(...arr)
             setLoading(false)
+            props.history.push('/search')
         })
     },[])
 
